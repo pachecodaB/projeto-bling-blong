@@ -1,0 +1,173 @@
+
+:root {
+    --cor-primaria: #ff6f00;  /* Laranja vibrante */
+    --cor-secundaria: #ff9000; /* Laranja mais claro */
+    --cor-texto-principal: #333;
+    --cor-texto-secundario: #555;
+    --cor-fundo: #f8f8f8;
+    --cor-fundo-claro: #fff;
+    --cor-footer: #333;
+    --cor-footer-texto: #fff;
+    --borda-cor: #ddd;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.sabores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.sabor {
+    background-color: var(--cor-fundo-claro);
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--borda-cor);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sabor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sabor img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.sabor h3 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sabor p {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+}
+
+.compra {
+    background-color: var(--cor-fundo-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.compra h2 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.compra p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
+    font-size: 1.2rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--cor-footer);
+    color: var(--cor-footer-texto);
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .sabores {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .compra h2 {
+        font-size: 1.8rem;
+    }
+
+    .sabor h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .compra h2 {
+        font-size: 1.6rem;
+    }
+
+    .sabor h3 {
+        font-size: 1.2rem;
+    }
+
+    .sabor img {
+        width: 100%;
+    }
+}
+
